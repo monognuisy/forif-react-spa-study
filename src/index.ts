@@ -1,5 +1,17 @@
-const greetPerson = (name: string): void => {
-  console.log(`hello! ${name}!`);
+interface Person {
+  name: string;
+  age: number;
+}
+
+// eslint-disable-next-line arrow-body-style
+const introducePerson = (person: Person): string => {
+  return `Hello! My name is ${person.name} and I'm ${person.age} years old.`;
 };
 
-greetPerson('monognuisy');
+const Me: Person = { name: 'Sungmin Yoo', age: 20 };
+
+console.log(introducePerson(Me));
+
+const TempDiv = document.createElement('div');
+TempDiv.innerText = introducePerson(Me);
+document.body.appendChild(TempDiv);
