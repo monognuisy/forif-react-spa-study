@@ -11,7 +11,3 @@ const introducePerson = (person: Person): string => {
 const Me: Person = { name: 'Sungmin Yoo', age: 20 };
 
 console.log(introducePerson(Me));
-
-const TempDiv = document.createElement('div');
-TempDiv.innerText = introducePerson(Me);
-document.body.appendChild(TempDiv);
